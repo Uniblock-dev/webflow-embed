@@ -1,0 +1,46 @@
+#iframe {
+  padding: 0;
+  margin: 0;
+  animation-name: animate-fade;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes animate-fade {
+  0% {
+    opacity: 0;
+    transform: scale(0, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+#iframe-div {
+  width: 600px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: -300px 0 0 -300px;
+  padding: 0;
+  z-index: 10000;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+#iframe-close-button {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.5rem;
+  height: 2rem;
+  width: 2rem;
+  padding: 0;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition-duration: 0.1s;
+}
