@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="uniblock-webflow-embed-stylesheet.css" />
+    <title>Document</title>
+  </head>
+  <style>
+    body,
+    html {
+      height: 200%;
+    }
+    /* 
+    #iframe {
+      padding: 0;
+      margin: 0;
+      animation-name: animate-fade;
+      animation-duration: 0.3s;
+      animation-timing-function: ease-out;
+    }
+
+    @keyframes animate-fade {
+      0% {
+        opacity: 0;
+        transform: scale(0, 1);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1, 1);
+      }
+    }
+
+    #iframe-div {
+      width: 600px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      margin: -300px 0 0 -300px;
+      padding: 0;
+      z-index: 10000;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #iframe-close-button {
+      text-align: center;
+      vertical-align: middle;
+      line-height: 1.5rem;
+      height: 2rem;
+      width: 2rem;
+      padding: 0;
+      margin-top: 1rem;
+      font-weight: 600;
+      font-size: 16px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition-duration: 0.1s;
+    } */
+  </style>
+  <body>
+    <button id="iframe-open-button">Mint Now</button>
+  </body>
+
+  <!-- <script>
+    // user scripts
+    const primaryColor = '#DE3163';
+    const secondaryColor = '#DE3163';
+    const bgColor = '#E0F7FA';
+    const textColor = '#DE3163';
+    const logoUri =
+      'https://1000logos.net/wp-content/uploads/2021/10/logo-Meta.png';
+    const iframeBorderWidth = '3px';
+    const iframeBorderRadius = '15px';
+
+    function queryEncodeUri(str) {
+      return encodeURIComponent(str).replace(/'/g, '%27').replace(/"/g, '%22');
+    }
+
+    // iframe element
+    let iframeElement = document.createElement('iframe');
+    iframeElement.src = `http://localhost:3000/embed?contractAddress=0x333b9b6519ba04d7b0d6ecad9a62f0634de33e12&chainId=5&implementationType=ERC721&primaryColor=${primaryColor.slice(
+      1,
+    )}&bgColor=${bgColor.slice(1)}&secondaryColor=${secondaryColor.slice(
+      1,
+    )}&textColor=${textColor.slice(1)}&logoUri=${queryEncodeUri(logoUri)}&borderWidth=${iframeBorderWidth}&borderRadius=${iframeBorderRadius}`;
+    iframeElement.setAttribute('id', 'iframe');
+    iframeElement.height = '400px';
+    iframeElement.width = '400px';
+    iframeElement.frameBorder = '0';
+    iframeElement.style.overflow = 'hidden';
+
+    // iframe close button
+    let iframeCloseButton = document.createElement('button');
+    iframeCloseButton.setAttribute('id', 'iframe-close-button');
+    iframeCloseButton.textContent = 'X';
+    iframeCloseButton.style.border = `2px solid ${primaryColor}`;
+    iframeCloseButton.style.backgroundColor = `${bgColor}`;
+    iframeCloseButton.style.color = primaryColor;
+    let buttonOnHoverStyle = document.createElement('style');
+    const onHoverCss = `
+    #iframe-close-button:hover {
+        transform: scale(1.2)
+    }
+    #iframe-close-button:active {
+        font-size:20px;
+        filter: brightness(0.9)
+    }`;
+    if (buttonOnHoverStyle.styleSheet) {
+      buttonOnHoverStyle.styleSheet.cssText = onHoverCss;
+    } else {
+      buttonOnHoverStyle.appendChild(document.createTextNode(onHoverCss));
+    }
+    document.getElementsByTagName('head')[0].appendChild(buttonOnHoverStyle);
+
+    // iframe div
+    let iframeDiv = document.createElement('div');
+    iframeDiv.setAttribute('id', 'iframe-div');
+    iframeDiv.appendChild(iframeElement);
+    iframeDiv.appendChild(iframeCloseButton);
+
+    document.getElementsByTagName('BODY')[0].appendChild(iframeDiv);
+
+    // OPEN
+    const handleIframeOpen = (e) => {
+      e.stopPropagation();
+      document.getElementById('iframe-div').style.display = 'flex';
+    };
+    // CLOSE
+    const handleIframeClose = (e) => {
+      e.stopPropagation();
+      document.getElementById('iframe-div').style.display = 'none';
+    };
+
+    // Listener: open iframe
+    document
+      .getElementById('iframe-open-button')
+      .addEventListener('click', (e) => handleIframeOpen(e));
+
+    // Listener: close iframe
+    document
+      .getElementById('iframe-close-button')
+      .addEventListener('click', (e) => handleIframeClose(e));
+  </script> -->
+  <script>
+    const primaryColor = "#DE3163";
+    const secondaryColor = "#DE3163";
+    const bgColor = "#E0F7FA";
+    const textColor = "#DE3163";
+    const logoUri =
+      "https://1000logos.net/wp-content/uploads/2021/10/logo-Meta.png";
+    const iframeBorderWidth = "2px";
+    const iframeBorderRadius = "15px";
+  </script>
+  <script src="uniblock-webflow-embed-script.js"></script>
+</html>
